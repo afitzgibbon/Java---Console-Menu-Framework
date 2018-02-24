@@ -19,7 +19,7 @@ public class MenuTest {
 		menu.execute();
 	}
 	
-	public void subMenuA() {
+	private void subMenuA() {
 		Menu menu = new Menu();
 		menu.setTitle("*** Sub Menu A ***");
 		menu.addItem(new MenuItem("Option Aa"));
@@ -28,14 +28,14 @@ public class MenuTest {
 	}
 	
 	/* This menu has no menu items but will still generate a single exit option. */
-	public void subMenuB() {
+	private void subMenuB() {
 		Menu menu = new Menu();
 		menu.setTitle("*** Sub Menu B ***");
 		menu.execute();
 	}
 	
 	/* Added a confirmation request here to demonstrate how it could be used. */
-	public void performOptionC() {
+	private void performOptionC() {
 		boolean confirm = ConsoleUtils.requestConfirmation();
 		if (confirm)
 			System.out.println("\nDo Option C...");
